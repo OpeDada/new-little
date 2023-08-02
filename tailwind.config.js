@@ -1,12 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
       sm: "480px",
-      md: "768px",
+      md: "820px",
       lg: "976px",
-      xl: "1240px",
+      xl: "1280px",
     },
     colors: {
       green: "#495E57",
@@ -30,6 +31,9 @@ module.exports = {
       },
       borderRadius: {
         "4xl": "2rem",
+      },
+      backgroundImage: {
+        'hero': 'url("../src/assets/banner.jpg")',
       },
     },
   },

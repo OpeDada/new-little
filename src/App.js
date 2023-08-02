@@ -5,11 +5,11 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
+    <div className="mx-auto">
       <Nav />
       <Homepage />
       <Footer />
-    </>
+    </div>
   );
 }
 
