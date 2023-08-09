@@ -2,7 +2,7 @@ import logo from "../assets/Logo.svg";
 
 const Nav = () => {
   return (
-    <nav className="px-32 py-4 text-green font-bold flex items-center">
+    <nav className="px-20 xl:px-60 py-4 text-green font-bold flex items-center">
       <img src={logo} alt="Nav logo"></img>
       <div className="container mx-auto">
         <ul className="flex justify-end md:space-x-4 lg:space-x-8">
