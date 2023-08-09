@@ -13,6 +13,7 @@ module.exports = {
       green: "#495E57",
       yellow: "#F4CE14",
       orange: "#EE9972",
+      white: "#FFFFFF",
       "orange-light": "#FBDABB",
       "gray-light": "#EDEFEE",
       "gray-dark": "#333333",
@@ -21,8 +22,10 @@ module.exports = {
       gray: "#8492a6",
     },
     fontFamily: {
-      sans: ["Graphik", "sans-serif"],
-      serif: ["Merriweather", "serif"],
+      sans: ["Karla", "sans-serif"],
+      // sans: ["Graphik", "sans-serif"],
+      // serif: ["Merriweather", "serif"],
+      serif: ["Markazi Text", "Karla", "serif"],
     },
     extend: {
       spacing: {
