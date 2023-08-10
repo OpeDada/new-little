@@ -12,7 +12,7 @@ const Homepage = () => {
               Little Lemon
             </h1>
             <h4 className="text-white text-xl">Chicago</h4>
-            <p className="text-white w-82 py-8">
+            <p className="text-white w-82 py-8 pr-4">
               We are a family owned Mediterranean restaurant, located on Maldove
               Street in Chicago, Illionis. We focus on traditional recipes
               served with a modern twist.
@@ -28,7 +28,7 @@ const Homepage = () => {
             <img
               src={food}
               alt="Header food"
-              className="rounded object-cover w-72"
+              className="rounded-lg object-cover w-96 max-h-80 mt-4"
             />
           </div>
         </header>
