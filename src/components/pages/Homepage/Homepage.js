@@ -6,8 +6,8 @@ import About from "./About"
 const Homepage = () => {
   return (
     <>
-      <main className="">
-        <Header />
+      <Header />
+      <main className="px-20 xl:px-60">
         <Specials />
         <Testimonials />
         <About />
