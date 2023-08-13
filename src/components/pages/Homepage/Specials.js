@@ -1,3 +1,5 @@
+import greek from "../../../assets/greek salad.jpg";
+
 const Specials = () => {
   return (
     <div className="px-20 py-40">
@@ -8,8 +10,8 @@ const Specials = () => {
         </button>
       </div>
       <section className="cards">
-        <article class="card">
-          <img src="/hair_lady.jpg" alt="" />
+        <article class="card max-w-sm bg-gray-light rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <img src={greek} alt="greek salad" />
           <div class="card-info">
             <h2>Greek salad</h2>
             <p>$12.99</p>
