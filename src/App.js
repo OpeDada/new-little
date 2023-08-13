@@ -1,6 +1,6 @@
 import "./App.css";
 import Nav from "./components/Nav";
-import Homepage from "./components/Homepage";
+import Homepage from "./components/pages/Homepage/Homepage";
 import Footer from "./components/Footer";
 
 function App() {
