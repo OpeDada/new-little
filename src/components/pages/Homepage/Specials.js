@@ -4,14 +4,14 @@ import lemonDessert from "../../../assets/lemon_d.jpg";
 
 const Specials = () => {
   return (
-    <div className="py-40">
+    <div className="pt-48 py-16">
       <div className="flex justify-between">
         <h1 className="text-3xl font-bold">This weeks specials!</h1>
         <button className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded">
           Online Menu
         </button>
       </div>
-      <section className="cards py-8 grid grid-cols-3 gap-6">
+      <section className="cards mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
         <article class="card max-w-sm bg-gray-light rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <img src={greek} alt="greek salad" className="rounded-t-lg" />
           <div class="card-info px-6 py-4 ">
@@ -21,7 +21,7 @@ const Specials = () => {
             </div>
             <p className="pb-8">
               Refreshing salad, made with tomato, lettuce, feta cheese, and
-              olives. Dressed with salt, hot pepper, and olive oil.
+              olives. Dressed with salt and olive oil.
             </p>
             <button className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded">
               Order for Delivery
@@ -48,7 +48,7 @@ const Specials = () => {
           <img
             src={lemonDessert}
             alt="lemon dessert"
-            className="rounded-t-lg"
+            className="rounded-t-xl"
           />
           <div class="card-info px-6 py-4">
             <div className="flex justify-between py-4 font-bold">
