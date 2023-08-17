@@ -4,7 +4,7 @@ import owners2 from "../../../assets/M and Ad-b.jpg";
 const About = () => {
   return (
     <>
-      <div className="container flex my-24 mx-auto md:px-6">
+      <div className="container flex gap-8 my-24 mx-auto md:px-6">
         <div>
           <h1>Little Lemon Chicago</h1>
           <h2>Chicago</h2>
@@ -17,16 +17,18 @@ const About = () => {
             thirty years later.
           </p>
         </div>
-        <img
-          src={owners}
-          className="h-60 shadow-lg dark:shadow-black/20"
-          alt=""
-        />
-        <img
-          src={owners2}
-          className="h-60 shadow-lg dark:shadow-black/20"
-          alt=""
-        />
+        <div className="object-contain relative h-82 w-128">
+          <img
+            src={owners}
+            className="absolute left-12 top-8 shadow-lg dark:shadow-black/20"
+            alt=""
+          />
+          <img
+            src={owners2}
+            className="absolute -left-4 -top-0 shadow-lg dark:shadow-black/20"
+            alt=""
+          />
+        </div>
       </div>
     </>
   );
