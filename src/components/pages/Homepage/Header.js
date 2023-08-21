@@ -9,7 +9,7 @@ const Header = () => {
           Little Lemon
         </h1>
         <h4 className="text-white text-xl">Chicago</h4>
-        <p className="text-white w-82 py-8 pr-4">
+        <p className="text-white py-8 pr-4 ">
           We are a family owned Mediterranean restaurant, located on Maldove
           Street in Chicago, Illionis. We focus on traditional recipes served
           with a modern twist.
@@ -21,11 +21,11 @@ const Header = () => {
           Reserve a Table
         </button>
       </section>
-      <div className="">
+      <div className="max-w-sm">
         <img
           src={food}
           alt="Header food"
-          className="rounded-lg object-cover w-96 max-h-80 mt-4"
+          className="rounded-lg sm:w-128 md:w-160 lg:w-80 max-h-80 mt-4"
         />
       </div>
     </header>
