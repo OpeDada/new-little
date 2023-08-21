@@ -7,7 +7,8 @@ const Footer = () => {
         <div className="flex justify-between items-center pb-8">
           <img src={logo} alt="" className="h-48 pt-8" />
           <ul className="footer-links pt-8">
-            <p>Navigation</p>
+            <p className="text-lg font-bold">Navigation</p>
+            <hr />
             <li>
               <a href="/">Home</a>
             </li>
@@ -28,7 +29,8 @@ const Footer = () => {
             </li>
           </ul>
           <ul className="footer-links">
-            <p>Contact</p>
+            <p className="text-lg font-bold"> Contact</p>
+            <hr />
             <li>
               <a href="/">Address</a>
             </li>
@@ -40,7 +42,8 @@ const Footer = () => {
             </li>
           </ul>
           <ul className="footer-links">
-            <p>Social Media</p>
+            <p className="text-lg font-bold">Social Media</p>
+            <hr />
             <li>
               <a href="/">Facebook</a>
             </li>
@@ -52,7 +55,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <p className="items-end">
+        <p className="">
           &copy; {new Date().getFullYear()} Little Lemon. All rights reserved.
         </p>
       </footer>
