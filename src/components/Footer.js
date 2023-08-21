@@ -1,11 +1,13 @@
-import logo from "../assets/footer-logo.png";
-
 const Footer = () => {
   return (
     <>
       <footer className="px-20 xl:px-60 bg-green h-80 text-white ">
         <div className="flex justify-between items-center pb-8">
-          <img src={logo} alt="" className="h-48 pt-8" />
+          <img
+            src={require("../assets/footer-logo.png")}
+            alt=""
+            className="h-48 pt-8"
+          />
           <ul className="footer-links pt-8">
             <p className="text-lg font-bold">Navigation</p>
             <hr />

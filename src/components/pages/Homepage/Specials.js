@@ -1,6 +1,4 @@
-import greek from "../../../assets/greek salad.jpg";
 import bruchetta from "../../../assets/bruchetta.svg";
-import lemonDessert from "../../../assets/lemon_d.jpg";
 
 const Specials = () => {
   return (
@@ -13,7 +11,11 @@ const Specials = () => {
       </div>
       <section className="cards mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
         <article class="card max-w-sm bg-gray-light rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <img src={greek} alt="greek salad" className="rounded-t-lg" />
+          <img
+            src={require("../../../assets/greek salad.jpg")}
+            alt="greek salad"
+            className="rounded-t-lg"
+          />
           <div class="card-info px-6 py-4 ">
             <div className="flex justify-between py-4 font-bold">
               <h2>Greek salad</h2>
@@ -46,7 +48,7 @@ const Specials = () => {
         </article>
         <article class="card max-w-sm bg-gray-light rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <img
-            src={lemonDessert}
+            src={require("../../../assets/lemon_d.jpg")}
             alt="lemon dessert"
             className="rounded-t-xl"
           />

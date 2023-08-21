@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import food from "../../../assets/headerfood.jpg";
 
 const Header = () => {
   return (
@@ -23,7 +22,7 @@ const Header = () => {
       </section>
       <div className="max-w-sm">
         <img
-          src={food}
+          src={require("../../../assets/headerfood.jpg")}
           alt="Header food"
           className="rounded-lg sm:w-128 md:w-160 lg:w-80 max-h-80 mt-4"
         />
