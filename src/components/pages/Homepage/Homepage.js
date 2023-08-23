@@ -7,7 +7,7 @@ const Homepage = () => {
   return (
     <>
       <Header />
-      <main className="px-20 xl:px-60">
+      <main className="">
         <Specials />
         <Testimonials />
         <About />

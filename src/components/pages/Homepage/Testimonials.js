@@ -1,8 +1,8 @@
 const Testimonials = () => {
   return (
     <>
-      <div classNameName="container bg-yellow my-24 mx-auto md:px-6 ">
-        <section className="mb-32 text-center py-16">
+      <div className=" bg-yellow my-24 mx-auto ">
+        <section className=" text-center py-16 px-20 xl:px-60">
           <h2 className="mb-16 text-3xl font-bold">Testimonials</h2>
 
           <div className="grid gap-x-6 md:grid-cols-3 lg:gap-x-12">
