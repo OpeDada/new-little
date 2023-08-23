@@ -4,7 +4,7 @@ import owners2 from "../../../assets/M and Ad-b.jpg";
 const About = () => {
   return (
     <>
-      <div className="container flex gap-8 my-32 max-w-4xl ">
+      <div className="container flex gap-8 my-24 max-w-4xl ">
         <div className="">
           <h1 className="text-2xl font-bold">Little Lemon</h1>
           <h2 className="text-lg font-bold pb-4">Chicago</h2>
@@ -17,7 +17,7 @@ const About = () => {
             thirty years later.
           </p>
         </div>
-        <div className="object-contain relative w-full">
+        <div className="object-contain relative w-128 h-80">
           <img
             src={owners}
             className="absolute  z-10 -left-4 -top-0 shadow-lg dark:shadow-black/20"
