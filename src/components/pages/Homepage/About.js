@@ -4,11 +4,11 @@ import owners2 from "../../../assets/M and Ad-b.jpg";
 const About = () => {
   return (
     <>
-      <div className="container flex gap-8 my-24 max-w-4xl ">
+      <div className="container flex gap-8 my-32 max-w-4xl ">
         <div className="">
-          <h1>Little Lemon Chicago</h1>
-          <h2>Chicago</h2>
-          <p className="pr-8">
+          <h1 className="text-2xl font-bold">Little Lemon</h1>
+          <h2 className="text-lg font-bold pb-4">Chicago</h2>
+          <p className="pr-8 max-w-4xl">
             Little Lemon opened in 1995 by two Italian brothers, Adrian and
             Mario. Despite the city's diversity, the two brothers recognized the
             lack of Mediterranean cuisine in Chicago, and were inspired to bring
