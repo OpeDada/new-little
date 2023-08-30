@@ -9,6 +9,15 @@ const BookingForm = () => {
     occasion: "",
   });
 
+  const [availableTimes, setAvailableTimes] = useState([
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00",
+  ]);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -24,12 +33,12 @@ const BookingForm = () => {
   };
 
   return (
-    <div className="py-8 px-4">
+    <div className="grid gap-4 max-w-xs py-8 px-4">
       <h2 className="text-xl font-semibold mb-4">Make a Reservation</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="date" className="block font-medium">
-            Date
+            Choose Date
           </label>
           <input
             type="date"
@@ -43,17 +52,21 @@ const BookingForm = () => {
         </div>
         <div className="mb-4">
           <label htmlFor="time" className="block font-medium">
-            Time
+            Choose Time
           </label>
-          <input
-            type="time"
+          <select
             id="time"
             name="time"
             value={formData.time}
             onChange={handleInputChange}
             className="border rounded p-2 w-full"
             required
-          />
+          >
+            <option value="">Select a Time</option>
+            {availableTimes.map((time, index) => (
+              <option key={index} value={time}>{time}</option>
+            ))}
+          </select>
         </div>
         <div className="mb-4">
           <label htmlFor="guests" className="block font-medium">
@@ -63,6 +76,9 @@ const BookingForm = () => {
             type="number"
             id="guests"
             name="guests"
+            placeholder="1"
+            min="1"
+            max="10"
             value={formData.guests}
             onChange={handleInputChange}
             className="border rounded p-2 w-full"
