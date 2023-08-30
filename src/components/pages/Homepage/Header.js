@@ -13,12 +13,9 @@ const Header = () => {
           Street in Chicago, Illionis. We focus on traditional recipes served
           with a modern twist.
         </p>
-        {/* <Link className="bg-yellow-500 hover:bg-green-700 text-white font-bold py-2 px-4" to="/">
+        <Link to="/reservation" className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded">
           Reserve a Table
-        </Link> */}
-        <button className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded">
-          Reserve a Table
-        </button>
+        </Link>
       </section>
       <div className="max-w-sm">
         <img
