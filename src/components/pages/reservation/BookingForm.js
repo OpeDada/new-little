@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const BookingForm = ({ availableTimes }) => {
+const BookingForm = ({ availableTimes, updateTimes }) => {
   const [formData, setFormData] = useState({
     date: "",
     time: "",
@@ -15,6 +15,9 @@ const BookingForm = ({ availableTimes }) => {
       ...formData,
       [name]: value,
     });
+    if (name === "date") {
+      updateTimes(value); // Call the updateTimes function when date changes
+    }
   };
 
   const handleSubmit = (e) => {
@@ -53,9 +56,11 @@ const BookingForm = ({ availableTimes }) => {
             className="border rounded p-2 w-full"
             required
           >
-             <option value="">Select a Time</option>
+            <option value="">Select a Time</option>
             {availableTimes.map((time, index) => (
-              <option key={index} value={time}>{time}</option>
+              <option key={index} value={time}>
+                {time}
+              </option>
             ))}
           </select>
         </div>
