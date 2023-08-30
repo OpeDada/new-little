@@ -10,13 +10,13 @@ const Specials = () => {
         </button>
       </div>
       <section className="cards mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
-        <article class="card max-w-sm bg-gray-light rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <article className="card max-w-sm bg-gray-light rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <img
             src={require("../../../assets/greek salad.jpg")}
             alt="greek salad"
             className="rounded-t-lg"
           />
-          <div class="card-info px-6 py-4 ">
+          <div className="card-info px-6 py-4 ">
             <div className="flex justify-between py-4 font-bold">
               <h2>Greek salad</h2>
               <p className="text-orange ">$12.99</p>
@@ -30,9 +30,9 @@ const Specials = () => {
             </button>
           </div>
         </article>
-        <article class="card max-w-sm bg-gray-light rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <article className="card max-w-sm bg-gray-light rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <img src={bruchetta} alt="bruchetta" className="rounded-t-lg" />
-          <div class="card-info px-6 py-4 ">
+          <div className="card-info px-6 py-4 ">
             <div className="flex justify-between py-4 font-bold">
               <h2>Bruchetta</h2>
               <p className="text-orange ">$16.99</p>
@@ -46,13 +46,13 @@ const Specials = () => {
             </button>
           </div>
         </article>
-        <article class="card max-w-sm bg-gray-light rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <article className="card max-w-sm bg-gray-light rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <img
             src={require("../../../assets/lemon_d.jpg")}
             alt="lemon dessert"
             className="rounded-t-xl"
           />
-          <div class="card-info px-6 py-4">
+          <div className="card-info px-6 py-4">
             <div className="flex justify-between py-4 font-bold">
               <h2>Lemon Dessert</h2>
               <p className="text-orange ">$8.50</p>
