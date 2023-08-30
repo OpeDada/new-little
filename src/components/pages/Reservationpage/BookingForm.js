@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const BookingForm = () => {
   const [formData, setFormData] = useState({
@@ -85,24 +86,15 @@ const BookingForm = () => {
             <option value="Anniversary">Anniversary</option>
           </select>
         </div>
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        <Link
+          to="/confirmation"
+          className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded"
         >
-          Submit Reservation
-        </button>
+          <button type="submit">Submit</button>
+        </Link>
       </form>
     </div>
   );
 };
 
-const ReservationPage = () => {
-  return (
-    <div>
-      <h1 className="text-2xl font-semibold mb-4">Reservation Page</h1>
-      <BookingForm />
-    </div>
-  );
-};
-
-export default ReservationPage;
+export default BookingForm;
