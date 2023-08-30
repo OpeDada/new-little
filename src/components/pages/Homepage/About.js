@@ -4,7 +4,7 @@ import owners2 from "../../../assets/M and Ad-b.jpg";
 const About = () => {
   return (
     <>
-      <div className="flex gap-20 my-24 px-20 xl:px-60">
+      <div id="about" className="flex gap-20 my-24 px-20 xl:px-60">
         <div className="">
           <h1 className="text-2xl font-bold">Little Lemon</h1>
           <h2 className="text-lg font-bold pb-4">Chicago</h2>
