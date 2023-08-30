@@ -1,4 +1,5 @@
 import logo from "../assets/Logo.svg";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -6,12 +7,24 @@ const Nav = () => {
       <img src={logo} alt="Nav logo"></img>
       <div className="container mx-auto">
         <ul className="flex justify-end md:space-x-4 lg:space-x-8">
-          <li>Home</li>
-          <li>About</li>
-          <li>Menu</li>
-          <li>Reservations</li>
-          <li>Order</li>
-          <li>Login</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/menu">Menu</Link>
+          </li>
+          <li>
+            <Link to="/reservations">Reservations</Link>
+          </li>
+          <li>
+            <Link to="/order">Order</Link>
+          </li>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
         </ul>
       </div>
     </nav>
