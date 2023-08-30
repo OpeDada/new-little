@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <footer className="px-20 xl:px-60 bg-green h-80 text-white ">
+      <footer className="px-20 xl:px-60 bg-green h-75 text-white ">
         <div className="flex justify-between items-center pb-8">
           <img
             src={require("../assets/footer-logo.png")}

@@ -20,7 +20,7 @@ const About = () => {
         <div className="relative w-80 h-80">
           <img
             src={owners}
-            className="absolute z-10 -left-4 -top-0 shadow-lg dark:shadow-black/20"
+            className="absolute z-10 -left-16 -top-0 shadow-lg dark:shadow-black/20"
             alt=""
           />
           <img
