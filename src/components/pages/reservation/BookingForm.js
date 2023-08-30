@@ -1,22 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const BookingForm = () => {
+const BookingForm = ({ availableTimes }) => {
   const [formData, setFormData] = useState({
     date: "",
     time: "",
     guests: "",
     occasion: "",
   });
-
-  const [availableTimes, setAvailableTimes] = useState([
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -62,7 +53,7 @@ const BookingForm = () => {
             className="border rounded p-2 w-full"
             required
           >
-            <option value="">Select a Time</option>
+             <option value="">Select a Time</option>
             {availableTimes.map((time, index) => (
               <option key={index} value={time}>{time}</option>
             ))}
