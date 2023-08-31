@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { fetchAPI, submitAPI } from "../../../BookingApi";
 
 const BookingForm = ({ availableTimes, updateTimes }) => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     date: "",
     time: "",
     guests: "",
     occasion: "",
   });
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -16,14 +19,32 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
       [name]: value,
     });
     if (name === "date") {
-      updateTimes(value); // Call the updateTimes function when date changes
+      const times = fetchAPI(value); // Fetch available times for the selected date
+      updateTimes(times); // Call the updateTimes function when date changes
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here, e.g. send the data to the server
-    console.log("Form submitted:", formData);
+    // Check if the selected time is in the available times list
+    if (!availableTimes.includes(formData.time)) {
+      console.log("The selected time is not available.");
+      return;
+    }
+
+    // Handle form submission using the submitAPI function
+    try {
+      const submitted = await submitAPI(formData);
+
+      if (submitted) {
+        console.log("Form submitted:", formData);
+        navigate("/confirmation");
+      } else {
+        console.log("Form submission failed.");
+      }
+    } catch (error) {
+      console.error("An error occurred:", error);
+    }
   };
 
   return (
@@ -98,12 +119,17 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
             <option value="Anniversary">Anniversary</option>
           </select>
         </div>
-        <Link
-          to="/confirmation"
+        {/* <Link
+          to="#"
+          className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded"
+        > */}
+        <button
+          type="submit"
           className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded"
         >
-          <button type="submit">Make a Reservation</button>
-        </Link>
+          Confirm Reservation
+        </button>
+        {/* </Link> */}
       </form>
     </div>
   );
