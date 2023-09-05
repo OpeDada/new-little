@@ -11,16 +11,14 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
     occasion: "",
   });
 
-
-  const handleInputChange = (e) => {
+  const handleInputChange = async (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
     });
     if (name === "date") {
-      const times = fetchAPI(value); // Fetch available times for the selected date
-      updateTimes(times); // Call the updateTimes function when date changes
+      await updateTimes(value); // Call the updateTimes function when date changes
     }
   };
 
