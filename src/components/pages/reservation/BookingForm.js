@@ -1,5 +1,5 @@
 import React from "react";
-import BookingFields from "./FormFields"; // Import the new FormFields component
+import FormFields from "./FormFields"; // Import the new FormFields component
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
@@ -52,24 +52,25 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
     },
   });
 
-
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="grid gap-4 max-w-md p-8 bg-white shadow rounded-lg">
         <h2 className="text-xl font-semibold mb-4">Make a Reservation</h2>
         <form onSubmit={formik.handleSubmit} className="grid grid-cols-2 gap-4">
-          <BookingFields
+          <FormFields
             formik={formik}
             availableTimes={availableTimes}
             updateTimes={updateTimes}
           />
-          <button
-            type="submit"
-            className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded col-span-2"
-            disabled={!formik.isValid}
-          >
-            Confirm Reservation
-          </button>
+          <div className="col-span-2 text-center">
+            <button
+              type="submit"
+              className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded"
+              disabled={!formik.isValid}
+            >
+              Confirm Reservation
+            </button>
+          </div>
         </form>
       </div>
     </div>
