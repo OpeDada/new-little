@@ -152,7 +152,9 @@ const FormFields = ({ formik, availableTimes, updateTimes }) => {
           Confirm Selection<span className="text-red">*</span>
         </label>
         {formik.touched.confirmSelection && formik.errors.confirmSelection && (
-          <div className="text-red">{formik.errors.confirmSelection}</div>
+          <div className="text-red w-[16rem]">
+            {formik.errors.confirmSelection}
+          </div>
         )}
       </div>
     </>
