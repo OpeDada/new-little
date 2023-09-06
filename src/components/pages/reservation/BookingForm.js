@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { fetchAPI, submitAPI } from "../../../BookingApi";
+import { useNavigate } from "react-router-dom";
 
-const BookingForm = ({ availableTimes, updateTimes }) => {
+const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     date: "",
@@ -18,7 +17,7 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
       [name]: value,
     });
     if (name === "date") {
-      await updateTimes(value); // Call the updateTimes function when date changes
+      updateTimes(value); // Call the updateTimes function when date changes
     }
   };
 
@@ -32,7 +31,7 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
 
     // Handle form submission using the submitAPI function
     try {
-      const submitted = await submitAPI(formData);
+      const submitted = await submitForm(formData);
 
       if (submitted) {
         console.log("Form submitted:", formData);
