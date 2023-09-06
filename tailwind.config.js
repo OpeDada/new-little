@@ -20,6 +20,7 @@ module.exports = {
       blue: "#1fb6ff",
       pink: "#ff49db",
       gray: "#8492a6",
+      red: "#ff0000",
     },
     fontFamily: {
       sans: ["Karla", "sans-serif"],
@@ -36,7 +37,7 @@ module.exports = {
         "4xl": "2rem",
       },
       backgroundImage: {
-        'hero': 'url("../src/assets/banner.jpg")',
+        hero: 'url("../src/assets/banner.jpg")',
       },
     },
   },

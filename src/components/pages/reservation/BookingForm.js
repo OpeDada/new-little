@@ -45,7 +45,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
     <div className="grid gap-4 max-w-xs py-8 px-4">
       <h2 className="text-xl font-semibold mb-4">Make a Reservation</h2>
       <form onSubmit={formik.handleSubmit}>
-        <div className="mb-4">
+        <div className="mb-4 ">
           <label htmlFor="date" className="block font-medium">
             Choose Date
           </label>
@@ -58,7 +58,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
             className="border rounded p-2 w-full"
           />
           {formik.touched.date && formik.errors.date && (
-            <div className="text-red-500">{formik.errors.date}</div>
+            <div className="text-red">{formik.errors.date}</div>
           )}
         </div>
         <div className="mb-4">
@@ -79,7 +79,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
             ))}
           </select>
           {formik.touched.time && formik.errors.time && (
-            <div className="text-red-500">{formik.errors.time}</div>
+            <div className="text-red">{formik.errors.time}</div>
           )}
         </div>
         <div className="mb-4">
@@ -97,7 +97,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
             className="border rounded p-2 w-full"
           />
           {formik.touched.guests && formik.errors.guests && (
-            <div className="text-red-500">{formik.errors.guests}</div>
+            <div className="text-red">{formik.errors.guests}</div>
           )}
         </div>
         <div className="mb-4">
@@ -115,7 +115,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
             <option value="Anniversary">Anniversary</option>
           </select>
           {formik.touched.occasion && formik.errors.occasion && (
-            <div className="text-red-500">{formik.errors.occasion}</div>
+            <div className="text-red">{formik.errors.occasion}</div>
           )}
         </div>
         <button
