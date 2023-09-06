@@ -8,12 +8,19 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
 
   const formik = useFormik({
     initialValues: {
+      firstName: "",
+      lastName: "",
       date: "",
       time: "",
       guests: "",
       occasion: "",
+      phone: "",
+      email: "",
+      confirmSelection: false,
     },
     validationSchema: Yup.object({
+      firstName: Yup.string().required("First Name is required"),
+      lastName: Yup.string().required("Last Name is required"),
       date: Yup.date().required("Date is required"),
       time: Yup.string().required("Time is required"),
       guests: Yup.number()
@@ -23,6 +30,14 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
         .max(10, "Guests cannot be more than 10")
         .required("Guests is required"),
       occasion: Yup.string().required("Occasion is required"),
+      phone: Yup.string().required("Phone is required"),
+      email: Yup.string()
+        .email("Invalid email address")
+        .required("Email is required"),
+      confirmSelection: Yup.boolean().oneOf(
+        [true],
+        "Please confirm your selection"
+      ),
     }),
     onSubmit: async (values) => {
       const submitted = await submitForm(values);
@@ -46,8 +61,38 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
       <h2 className="text-xl font-semibold mb-4">Make a Reservation</h2>
       <form onSubmit={formik.handleSubmit}>
         <div className="mb-4 ">
+          <label htmlFor="firstName" className="block font-medium">
+            First Name<span className="text-red">*</span>
+          </label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            {...formik.getFieldProps("firstName")}
+            className="border rounded p-2 w-full"
+          />
+          {formik.touched.firstName && formik.errors.firstName && (
+            <div className="text-red">{formik.errors.firstName}</div>
+          )}
+        </div>
+        <div className="mb-4">
+          <label htmlFor="lastName" className="block font-medium">
+            Last Name<span className="text-red">*</span>
+          </label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            {...formik.getFieldProps("lastName")}
+            className="border rounded p-2 w-full"
+          />
+          {formik.touched.lastName && formik.errors.lastName && (
+            <div className="text-red">{formik.errors.lastName}</div>
+          )}
+        </div>
+        <div className="mb-4">
           <label htmlFor="date" className="block font-medium">
-            Choose Date
+            Choose Date<span className="text-red">*</span>
           </label>
           <input
             type="date"
@@ -63,7 +108,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
         </div>
         <div className="mb-4">
           <label htmlFor="time" className="block font-medium">
-            Choose Time
+            Choose Time<span className="text-red">*</span>
           </label>
           <select
             id="time"
@@ -84,7 +129,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
         </div>
         <div className="mb-4">
           <label htmlFor="guests" className="block font-medium">
-            Number of Guests
+            Number of Guests<span className="text-red">*</span>
           </label>
           <input
             type="number"
@@ -102,7 +147,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
         </div>
         <div className="mb-4">
           <label htmlFor="occasion" className="block font-medium">
-            Occasion
+            Occasion<span className="text-red">*</span>
           </label>
           <select
             id="occasion"
@@ -117,6 +162,51 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
           {formik.touched.occasion && formik.errors.occasion && (
             <div className="text-red">{formik.errors.occasion}</div>
           )}
+        </div>
+        <div className="mb-4">
+          <label htmlFor="phone" className="block font-medium">
+            Phone<span className="text-red">*</span>
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            {...formik.getFieldProps("phone")}
+            className="border rounded p-2 w-full"
+          />
+          {formik.touched.phone && formik.errors.phone && (
+            <div className="text-red">{formik.errors.phone}</div>
+          )}
+        </div>
+        <div className="mb-4">
+          <label htmlFor="email" className="block font-medium">
+            Email<span className="text-red">*</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            {...formik.getFieldProps("email")}
+            className="border rounded p-2 w-full"
+          />
+          {formik.touched.email && formik.errors.email && (
+            <div className="text-red">{formik.errors.email}</div>
+          )}
+        </div>
+        <div className="mb-4">
+          <label className="flex items-center cursor-pointer">
+            <input
+              type="checkbox"
+              name="confirmSelection"
+              {...formik.getFieldProps("confirmSelection")}
+              className="mr-2"
+            />
+            Confirm Selection<span className="text-red">*</span>
+          </label>
+          {formik.touched.confirmSelection &&
+            formik.errors.confirmSelection && (
+              <div className="text-red">{formik.errors.confirmSelection}</div>
+            )}
         </div>
         <button
           type="submit"
