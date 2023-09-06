@@ -52,10 +52,6 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
     },
   });
 
-  const handleDateChange = (date) => {
-    formik.setFieldValue("date", date);
-    updateTimes(date);
-  };
 
   return (
     <div className="flex justify-center items-center h-screen">
