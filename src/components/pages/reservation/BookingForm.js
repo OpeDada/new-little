@@ -1,53 +1,50 @@
-import React, { useState } from "react";
+import React from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 
 const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    date: "",
-    time: "",
-    guests: "",
-    occasion: "",
-  });
 
-  const handleInputChange = async (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-    if (name === "date") {
-      updateTimes(value); // Call the updateTimes function when date changes
-    }
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // Check if the selected time is in the available times list
-    if (!availableTimes.includes(formData.time)) {
-      console.log("The selected time is not available.");
-      return;
-    }
-
-    // Handle form submission using the submitAPI function
-    try {
-      const submitted = await submitForm(formData);
+  const formik = useFormik({
+    initialValues: {
+      date: "",
+      time: "",
+      guests: "",
+      occasion: "",
+    },
+    validationSchema: Yup.object({
+      date: Yup.date().required("Date is required"),
+      time: Yup.string().required("Time is required"),
+      guests: Yup.number()
+        .typeError("Guests must be a number")
+        .integer("Guests must be an integer")
+        .min(1, "Guests must be at least 1")
+        .max(10, "Guests cannot be more than 10")
+        .required("Guests is required"),
+      occasion: Yup.string().required("Occasion is required"),
+    }),
+    onSubmit: async (values) => {
+      const submitted = await submitForm(values);
 
       if (submitted) {
-        console.log("Form submitted:", formData);
+        console.log("Form submitted:", values);
         navigate("/confirmation");
       } else {
         console.log("Form submission failed.");
       }
-    } catch (error) {
-      console.error("An error occurred:", error);
-    }
+    },
+  });
+
+  const handleDateChange = (date) => {
+    formik.setFieldValue("date", date);
+    updateTimes(date);
   };
 
   return (
     <div className="grid gap-4 max-w-xs py-8 px-4">
       <h2 className="text-xl font-semibold mb-4">Make a Reservation</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={formik.handleSubmit}>
         <div className="mb-4">
           <label htmlFor="date" className="block font-medium">
             Choose Date
@@ -56,11 +53,13 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
             type="date"
             id="date"
             name="date"
-            value={formData.date}
-            onChange={handleInputChange}
+            {...formik.getFieldProps("date")}
+            onChange={(e) => handleDateChange(e.target.value)}
             className="border rounded p-2 w-full"
-            required
           />
+          {formik.touched.date && formik.errors.date && (
+            <div className="text-red-500">{formik.errors.date}</div>
+          )}
         </div>
         <div className="mb-4">
           <label htmlFor="time" className="block font-medium">
@@ -69,10 +68,8 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
           <select
             id="time"
             name="time"
-            value={formData.time}
-            onChange={handleInputChange}
+            {...formik.getFieldProps("time")}
             className="border rounded p-2 w-full"
-            required
           >
             <option value="">Select a Time</option>
             {availableTimes.map((time, index) => (
@@ -81,6 +78,9 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
               </option>
             ))}
           </select>
+          {formik.touched.time && formik.errors.time && (
+            <div className="text-red-500">{formik.errors.time}</div>
+          )}
         </div>
         <div className="mb-4">
           <label htmlFor="guests" className="block font-medium">
@@ -93,11 +93,12 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
             placeholder="1"
             min="1"
             max="10"
-            value={formData.guests}
-            onChange={handleInputChange}
+            {...formik.getFieldProps("guests")}
             className="border rounded p-2 w-full"
-            required
           />
+          {formik.touched.guests && formik.errors.guests && (
+            <div className="text-red-500">{formik.errors.guests}</div>
+          )}
         </div>
         <div className="mb-4">
           <label htmlFor="occasion" className="block font-medium">
@@ -106,27 +107,24 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
           <select
             id="occasion"
             name="occasion"
-            value={formData.occasion}
-            onChange={handleInputChange}
+            {...formik.getFieldProps("occasion")}
             className="border rounded p-2 w-full"
-            required
           >
             <option value="">Select an Occasion</option>
             <option value="Birthday">Birthday</option>
             <option value="Anniversary">Anniversary</option>
           </select>
+          {formik.touched.occasion && formik.errors.occasion && (
+            <div className="text-red-500">{formik.errors.occasion}</div>
+          )}
         </div>
-        {/* <Link
-          to="#"
-          className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded"
-        > */}
         <button
           type="submit"
           className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded"
+          disabled={!formik.isValid}
         >
           Confirm Reservation
         </button>
-        {/* </Link> */}
       </form>
     </div>
   );
