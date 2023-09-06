@@ -1,8 +1,7 @@
-import React from "react";
-import FormFields from "./FormFields"; // Import the new FormFields component
+import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
+import FormFields from "./FormFields";
 
 const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
   const navigate = useNavigate();
