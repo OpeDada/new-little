@@ -20,7 +20,7 @@ module.exports = {
       blue: "#1fb6ff",
       pink: "#ff49db",
       gray: "#8492a6",
-      red: "#ff0000",
+      red: "#b30000",
     },
     fontFamily: {
       sans: ["Karla", "sans-serif"],
