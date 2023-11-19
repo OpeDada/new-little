@@ -142,19 +142,18 @@ const FormFields = ({ formik, availableTimes, updateTimes }) => {
         )}
       </div>
       <div className="mb-4">
-        <label htmlFor="request" className="block font-medium">
-          Special Requests <span className="text-red">*</span>
+        <label htmlFor="specialRequest" className="block font-medium">
+          Special Request
         </label>
-        <input
-          type="text"
-          id="request"
-          name="request"
-          {...formik.getFieldProps("email")}
+        <textarea
+          id="specialRequest"
+          name="specialRequest"
+          {...formik.getFieldProps("specialRequest")}
           className="border rounded p-2 w-full"
         />
-        {/* {formik.touched.email && formik.errors.email && (
-          <div className="text-red">{formik.errors.email}</div>
-        )} */}
+        {formik.touched.specialRequest && formik.errors.specialRequest && (
+          <div className="text-red">{formik.errors.specialRequest}</div>
+        )}
       </div>
       <div className="mb-4">
         <label className="flex items-center cursor-pointer">
