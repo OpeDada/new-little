@@ -17,6 +17,39 @@ const FormFields = ({
       <div className="mb-4">
         {/* Fields for the first section */}
         {/* ... */}
+        <div className="mb-4">
+          <label className="block font-medium">Seating Preference</label>
+          <div>
+            <label className="flex items-center">
+              <input
+                type="radio"
+                id="indoorSeating"
+                name="seatingPreference"
+                value="indoor"
+                {...formik.getFieldProps("seatingPreference")}
+                className="mr-2"
+              />
+              Indoor Seating
+            </label>
+          </div>
+          <div>
+            <label className="flex items-center">
+              <input
+                type="radio"
+                id="outdoorSeating"
+                name="seatingPreference"
+                value="outdoor"
+                {...formik.getFieldProps("seatingPreference")}
+                className="mr-2"
+              />
+              Outdoor Seating
+            </label>
+          </div>
+          {formik.touched.seatingPreference &&
+            formik.errors.seatingPreference && (
+              <div className="text-red">{formik.errors.seatingPreference}</div>
+            )}
+        </div>
         <button
           type="button"
           onClick={handleReserveTableClick}
