@@ -71,10 +71,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
             updateTimes={updateTimes}
             handleReserveTableClick={handleReserveTableClick}
           />
-          <div id="secondSection" className="col-span-2">
-            <FormFieldsSecondSection formik={formik} />
-          </div>
-          {/* <div className="col-span-2 text-center">
+          <div className="col-span-2 text-center">
             <button
               type="submit"
               className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded"
@@ -82,7 +79,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
             >
               Confirm Reservation
             </button>
-          </div> */}
+          </div>
         </form>
       </div>
     </div>
