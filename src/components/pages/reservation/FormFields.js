@@ -1,10 +1,17 @@
 import React from "react";
 
-const FormFields = ({ formik, availableTimes, updateTimes }) => {
+const FormFields = ({
+  formik,
+  availableTimes,
+  updateTimes,
+  handleReserveTableClick,
+}) => {
   const handleDateChange = (date) => {
     formik.setFieldValue("date", date);
     updateTimes(date);
   };
+
+
 
   return (
     <>
