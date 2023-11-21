@@ -13,7 +13,7 @@ const FormFields = ({
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-4 mb-4">
+      <div className="grid grid-cols-2 gap-8 mb-4">
         {/* Fields for the first section */}
         <label className="block font-medium">Seating Preference</label>
         <div className="flex gap-4 col-span-2 mb-4">
@@ -66,27 +66,6 @@ const FormFields = ({
           )}
         </div>
 
-        <div className="col-span-1">
-          <label htmlFor="time" className="block font-medium">
-            Choose Time<span className="text-red">*</span>
-          </label>
-          <select
-            id="time"
-            name="time"
-            {...formik.getFieldProps("time")}
-            className="border rounded p-2 w-full"
-          >
-            <option value="">Select a Time</option>
-            {availableTimes.map((time, index) => (
-              <option key={index} value={time}>
-                {time}
-              </option>
-            ))}
-          </select>
-          {formik.touched.time && formik.errors.time && (
-            <div className="text-red">{formik.errors.time}</div>
-          )}
-        </div>
         {/* </div> */}
         {/* <div className="mb-4"> */}
         <div className="col-span-1">
@@ -108,6 +87,27 @@ const FormFields = ({
           )}
         </div>
         <div className="col-span-1">
+          <label htmlFor="time" className="block font-medium">
+            Choose Time<span className="text-red">*</span>
+          </label>
+          <select
+            id="time"
+            name="time"
+            {...formik.getFieldProps("time")}
+            className="border rounded p-2 w-full"
+          >
+            <option value="">Select a Time</option>
+            {availableTimes.map((time, index) => (
+              <option key={index} value={time}>
+                {time}
+              </option>
+            ))}
+          </select>
+          {formik.touched.time && formik.errors.time && (
+            <div className="text-red">{formik.errors.time}</div>
+          )}
+        </div>
+        <div className="col-span-1">
           <label htmlFor="occasion" className="block font-medium">
             Occasion<span className="text-red">*</span>
           </label>
@@ -125,20 +125,20 @@ const FormFields = ({
             <div className="text-red">{formik.errors.occasion}</div>
           )}
         </div>
-        <div className="text-center mb-4">
-          <button
-            type="button"
-            onClick={handleReserveTableClick}
-            className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded"
-          >
-            Reserve a Table
-          </button>
-        </div>
+      </div>
+      <div className="text-left mb-8 mt-8">
+        <button
+          type="button"
+          onClick={handleReserveTableClick}
+          className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded"
+        >
+          Reserve a Table
+        </button>
       </div>
       <br />
 
       {/* Second section */}
-      <div id="secondSection" className="grid grid-cols-2 gap-4">
+      <div id="secondSection" className="grid grid-cols-2 gap-8">
         {/* Fields for the second section */}
         {/* ... */}
         {/* <div className="mb-4"> */}
