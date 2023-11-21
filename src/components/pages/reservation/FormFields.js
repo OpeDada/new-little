@@ -126,7 +126,7 @@ const FormFields = ({
           )}
         </div>
       </div>
-      <div className="text-left mb-8 mt-8">
+      <div className="text-center mb-8 mt-8">
         <button
           type="button"
           onClick={handleReserveTableClick}
@@ -221,14 +221,16 @@ const FormFields = ({
           )}
         </div>
         {/* Display user input from the first section */}
-        <div className="mb-4">
+        <div className="col-span-2 mb-4 text-left">
           <h3 className="text-lg font-semibold mb-2">Reservation Details</h3>
           <p>Date: {formik.values.date}</p>
           <p>Time: {formik.values.time}</p>
           <p>Occasion: {formik.values.occasion}</p>
+          <p>No of Guests: {formik.values.guests}</p>
+          <p>Seating Preference: {formik.values.seatingPreference}</p>
           {/* ... Display other values */}
         </div>
-        <br />
+
         <div className="mb-4">
           <label className="flex items-center cursor-pointer">
             <input
