@@ -13,10 +13,10 @@ const FormFields = ({
 
   return (
     <>
-      <div className="grid gap-4 mb-4">
+      <div className="grid grid-cols-2 gap-4 mb-4">
         {/* Fields for the first section */}
-        <div className="col-span-2 mb-4">
-          <label className="block font-medium">Seating Preference</label>
+        <label className="block font-medium">Seating Preference</label>
+        <div className="flex gap-4 col-span-2 mb-4">
           <div className="mb-4">
             <label className="flex items-center">
               <input
@@ -138,7 +138,7 @@ const FormFields = ({
       <br />
 
       {/* Second section */}
-      <div id="secondSection" className="grid gap-4">
+      <div id="secondSection" className="grid grid-cols-2 gap-4">
         {/* Fields for the second section */}
         {/* ... */}
         {/* <div className="mb-4"> */}
@@ -228,16 +228,24 @@ const FormFields = ({
           <p>Occasion: {formik.values.occasion}</p>
           {/* ... Display other values */}
         </div>
-        {/* Confirm Selection Button */}
-        {/* <div className="mb-4">
-          <button
-            type="submit"
-            className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded"
-            disabled={!formik.isValid}
-            >
-            Confirm Selection
-          </button>
-            </div> */}
+        <br />
+        <div className="mb-4">
+          <label className="flex items-center cursor-pointer">
+            <input
+              type="checkbox"
+              name="confirmSelection"
+              {...formik.getFieldProps("confirmSelection")}
+              className="mr-2"
+            />
+            Confirm Selection<span className="text-red">*</span>
+          </label>
+          {formik.touched.confirmSelection &&
+            formik.errors.confirmSelection && (
+              <div className="text-red w-[16rem]">
+                {formik.errors.confirmSelection}
+              </div>
+            )}
+        </div>
       </div>
     </>
   );
@@ -391,22 +399,22 @@ const FormFields = ({
   //     <div className="text-red">{formik.errors.specialRequest}</div>
   //   )}
   // </div>
-  //     <div className="mb-4">
-  //       <label className="flex items-center cursor-pointer">
-  //         <input
-  //           type="checkbox"
-  //           name="confirmSelection"
-  //           {...formik.getFieldProps("confirmSelection")}
-  //           className="mr-2"
-  //         />
-  //         Confirm Selection<span className="text-red">*</span>
-  //       </label>
-  //       {formik.touched.confirmSelection && formik.errors.confirmSelection && (
-  //         <div className="text-red w-[16rem]">
-  //           {formik.errors.confirmSelection}
-  //         </div>
-  //       )}
-  //     </div>
+      // <div className="mb-4">
+      //   <label className="flex items-center cursor-pointer">
+      //     <input
+      //       type="checkbox"
+      //       name="confirmSelection"
+      //       {...formik.getFieldProps("confirmSelection")}
+      //       className="mr-2"
+      //     />
+      //     Confirm Selection<span className="text-red">*</span>
+      //   </label>
+      //   {formik.touched.confirmSelection && formik.errors.confirmSelection && (
+      //     <div className="text-red w-[16rem]">
+      //       {formik.errors.confirmSelection}
+      //     </div>
+      //   )}
+      // </div>
   //   </>
   // );
 };

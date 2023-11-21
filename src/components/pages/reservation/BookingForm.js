@@ -61,10 +61,10 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
     };
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="grid gap-4 max-w-md p-8 bg-white shadow rounded-lg">
+    <div className="flex justify-center items-center">
+      <div className="max-w-md p-8 bg-white shadow rounded-lg">
         <h2 className="text-xl font-semibold mb-4">Make a Reservation</h2>
-        <form onSubmit={formik.handleSubmit} className="grid gap-4">
+        <form onSubmit={formik.handleSubmit} className="">
           <FormFields
             formik={formik}
             availableTimes={availableTimes}
