@@ -23,8 +23,11 @@ const FormFields = ({
                 type="radio"
                 id="indoorSeating"
                 name="seatingPreference"
-                value="indoor"
-                {...formik.getFieldProps("seatingPreference")}
+                value="indoor" // Set the value to 'indoor'
+                checked={formik.values.seatingPreference === "Indoor"} // Check if it's 'indoor'
+                onChange={() =>
+                  formik.setFieldValue("seatingPreference", "Indoor")
+                } // Set the field value to 'indoor'
                 className="mr-2"
               />
               Indoor Seating
@@ -36,8 +39,11 @@ const FormFields = ({
                 type="radio"
                 id="outdoorSeating"
                 name="seatingPreference"
-                value="outdoor"
-                {...formik.getFieldProps("seatingPreference")}
+                value="outdoor" // Set the value to 'outdoor'
+                checked={formik.values.seatingPreference === "Outdoor"} // Check if it's 'outdoor'
+                onChange={() =>
+                  formik.setFieldValue("seatingPreference", "Outdoor")
+                } // Set the field value to 'outdoor'
                 className="mr-2"
               />
               Outdoor Seating
@@ -227,8 +233,10 @@ const FormFields = ({
           <p>Time: {formik.values.time}</p>
           <p>Occasion: {formik.values.occasion}</p>
           <p>No of Guests: {formik.values.guests}</p>
-          <p>Seating Preference: {formik.values.seatingPreference}</p>
-          {/* ... Display other values */}
+          <p>
+            Seating Preference:{" "}
+            {formik.values.seatingPreference}
+          </p>
         </div>
 
         <div className="mb-4">
@@ -401,22 +409,22 @@ const FormFields = ({
   //     <div className="text-red">{formik.errors.specialRequest}</div>
   //   )}
   // </div>
-      // <div className="mb-4">
-      //   <label className="flex items-center cursor-pointer">
-      //     <input
-      //       type="checkbox"
-      //       name="confirmSelection"
-      //       {...formik.getFieldProps("confirmSelection")}
-      //       className="mr-2"
-      //     />
-      //     Confirm Selection<span className="text-red">*</span>
-      //   </label>
-      //   {formik.touched.confirmSelection && formik.errors.confirmSelection && (
-      //     <div className="text-red w-[16rem]">
-      //       {formik.errors.confirmSelection}
-      //     </div>
-      //   )}
-      // </div>
+  // <div className="mb-4">
+  //   <label className="flex items-center cursor-pointer">
+  //     <input
+  //       type="checkbox"
+  //       name="confirmSelection"
+  //       {...formik.getFieldProps("confirmSelection")}
+  //       className="mr-2"
+  //     />
+  //     Confirm Selection<span className="text-red">*</span>
+  //   </label>
+  //   {formik.touched.confirmSelection && formik.errors.confirmSelection && (
+  //     <div className="text-red w-[16rem]">
+  //       {formik.errors.confirmSelection}
+  //     </div>
+  //   )}
+  // </div>
   //   </>
   // );
 };
