@@ -267,6 +267,15 @@ const FormFields = ({
                         </div>
                       )}
                   </div>
+                  <div className="col-span-2 text-center">
+                    <button
+                      type="submit"
+                      className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded cursor-pointer"
+                      disabled={!formik.isValid}
+                    >
+                      Confirm Reservation
+                    </button>
+                  </div>
                 </div>
               </>
             );
