@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import FormFields from "./FormFields";
+import { FormFields, FormFieldsSecondSection } from "./FormFields";
 
 const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
   const navigate = useNavigate();
@@ -72,6 +72,9 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
             handleReserveTableClick={handleReserveTableClick}
           />
           <div className="col-span-2 text-center">
+            <div>
+              <FormFieldsSecondSection formik={formik} />
+            </div>
             <button
               type="submit"
               className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded"
