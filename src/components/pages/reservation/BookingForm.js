@@ -65,16 +65,17 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
       <div className="max-w-md p-8 bg-white shadow rounded-lg">
         <h2 className="text-xl font-semibold mb-4">Make a Reservation</h2>
         <form onSubmit={formik.handleSubmit} className="">
-          <FormFields
-            formik={formik}
-            availableTimes={availableTimes}
-            updateTimes={updateTimes}
-            handleReserveTableClick={handleReserveTableClick}
-          />
-          <div>
+          <div className="">
+            <FormFields
+              formik={formik}
+              availableTimes={availableTimes}
+              updateTimes={updateTimes}
+              handleReserveTableClick={handleReserveTableClick}
+            />
+          </div>
+          <div className="">
             <FormFieldsSecondSection formik={formik} />
           </div>
-      
         </form>
       </div>
     </div>
