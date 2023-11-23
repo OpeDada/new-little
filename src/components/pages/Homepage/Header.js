@@ -4,24 +4,27 @@ const Header = () => {
   return (
     <header className="bg-hero bg-cover h-64 px-20 xl:px-60 py-3 flex justify-between">
       <section>
-        <h1 className="text-yellow text-3xl font-serif font-bold">
+        <h1 className="text-yellow lg:text-3xl  font-serif font-bold">
           Little Lemon
         </h1>
-        <h4 className="text-white text-xl">Chicago</h4>
-        <p className="text-white py-8 pr-4 ">
+        <h4 className="text-white lg:text-xl">Chicago</h4>
+        <p className="text-white py-8 pr-4 lg:text-lg sm:text-sm">
           We are a family owned Mediterranean restaurant, located on Maldove
           Street in Chicago, Illionis. We focus on traditional recipes served
           with a modern twist.
         </p>
-        <Link to="/reservation" className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded">
+        <Link
+          to="/reservation"
+          className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded lg:text-lg sm:text-sm"
+        >
           Reserve a Table
         </Link>
       </section>
-      <div className="max-w-sm">
+      <div className="w-4/5">
         <img
           src={require("../../../assets/headerfood.jpg")}
           alt="Header food"
-          className="rounded-lg sm:w-128 md:w-160 lg:w-80 max-h-80 mt-4"
+          className="rounded-lg  "
         />
       </div>
     </header>
@@ -29,3 +32,5 @@ const Header = () => {
 };
 
 export default Header;
+
+          // className = "rounded-lg sm:w-128 md:w-160 lg:w-80 max-h-80 mt-4";
