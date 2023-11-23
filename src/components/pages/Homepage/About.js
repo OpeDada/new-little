@@ -17,7 +17,7 @@ const About = () => {
             thirty years later.
           </p>
         </div>
-        <div className="relative w-80 h-80">
+        {/* <div className="relative w-80 h-80">
           <img
             src={owners}
             className="absolute z-10 -left-16 -top-0 shadow-lg dark:shadow-black/20"
@@ -28,7 +28,7 @@ const About = () => {
             className="absolute left-32 top-20 shadow-lg dark:shadow-black/20"
             alt=""
           />
-        </div>
+        </div> */}
       </div>
     </>
   );
