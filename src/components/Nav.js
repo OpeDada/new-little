@@ -14,7 +14,7 @@ const Nav = () => {
       <img src={logo} alt="Nav logo"></img>
       <div className="container mx-auto">
         <div className="justify-end hidden md:flex md:items-center">
-          <ul className="flex justify-end md:space-x-4 lg:space-x-8">
+          <ul className="flex md:space-x-4 lg:space-x-8">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -65,7 +65,7 @@ const Nav = () => {
           </button>
         </div>
         {showMenu && (
-          <ul className="md:hidden flex flex-col items-center mt-4">
+          <ul className="md:hidden justify-end flex flex-col items-center mt-4">
             <li>
               <Link to="/">Home</Link>
             </li>
