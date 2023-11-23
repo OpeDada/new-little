@@ -8,7 +8,7 @@ const Header = () => {
           Little Lemon
         </h1>
         <h4 className="text-white lg:text-xl">Chicago</h4>
-        <p className="text-white py-8 pr-4 lg:text-lg sm:text-sm">
+        <p className="text-white py-8 pr-4 lg:text-lg sm:text-sm/[16px]">
           We are a family owned Mediterranean restaurant, located on Maldove
           Street in Chicago, Illionis. We focus on traditional recipes served
           with a modern twist.
@@ -20,11 +20,11 @@ const Header = () => {
           Reserve a Table
         </Link>
       </section>
-      <div className="w-4/5">
+      <div className="xl:w-1/5 md:w-3/5 sm:h-2/4">
         <img
           src={require("../../../assets/headerfood.jpg")}
           alt="Header food"
-          className="rounded-lg  "
+          className="rounded-lg"
         />
       </div>
     </header>
