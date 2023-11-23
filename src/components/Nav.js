@@ -10,7 +10,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="px-20 xl:px-60 py-4 text-green font-bold flex items-center">
+    <nav className="px-10 xl:px-60 py-4 text-green font-bold flex items-center">
       <img src={logo} alt="Nav logo"></img>
       <div className="container mx-auto">
         <div className="justify-end hidden md:flex md:items-center">

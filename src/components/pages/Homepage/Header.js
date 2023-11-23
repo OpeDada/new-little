@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="bg-hero bg-cover h-64 px-20 xl:px-60 py-3 flex justify-between">
+    <header className="bg-hero bg-cover h-64 sm:px-10 xl:px-60 sm:text-sm py-3 flex justify-between gap-4">
       <section>
-        <h1 className="text-yellow lg:text-3xl  font-serif font-bold">
+        <h1 className="text-yellow lg:text-3xl font-serif font-bold">
           Little Lemon
         </h1>
-        <h4 className="text-white lg:text-xl">Chicago</h4>
-        <p className="text-white py-8 pr-4 lg:text-lg sm:text-sm/[16px]">
+        <h4 className="text-white">Chicago</h4>
+        <p className="text-white py-8">
           We are a family owned Mediterranean restaurant, located on Maldove
           Street in Chicago, Illionis. We focus on traditional recipes served
           with a modern twist.
@@ -20,7 +20,7 @@ const Header = () => {
           Reserve a Table
         </Link>
       </section>
-      <div className="xl:w-1/5 md:w-3/5 sm:h-2/4">
+      <div className="xl:w-1/5 md:w-3/5 sm:w-screen sm:pt-8">
         <img
           src={require("../../../assets/headerfood.jpg")}
           alt="Header food"
