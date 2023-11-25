@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <Router>
-      <div className="mx-auto ">
+      <div className="mx-auto">
         <Nav />
         <Routes>
           <Route path="/" element={<Homepage />} />
