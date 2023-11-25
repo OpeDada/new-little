@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="bg-hero bg-cover h-64 sm:px-10 xl:px-60 sm:text-sm py-3 flex justify-between gap-4">
+    <header className="bg-hero bg-cover h-64 px-10 xl:px-40 sm:text-sm py-3 flex justify-between gap-4">
       <section>
         <h1 className="text-yellow lg:text-3xl font-serif font-bold">
           Little Lemon
@@ -20,7 +20,7 @@ const Header = () => {
           Reserve a Table
         </Link>
       </section>
-      <div className="xl:w-1/5 md:w-3/5 sm:w-screen sm:pt-8">
+      <div className="lg:w-1/5 md:w-3/5 sm:w-screen sm:pt-8">
         <img
           src={require("../../../assets/headerfood.jpg")}
           alt="Header food"
