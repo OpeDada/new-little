@@ -2,9 +2,9 @@ import bruchetta from "../../../assets/bruchetta.svg";
 
 const Specials = () => {
   return (
-    <div className="pt-48 py-16 px-20 xl:px-60">
+    <div className="pt-48 py-16 px-10 xl:px-40">
       <div className="flex justify-between">
-        <h1 className="text-3xl font-bold">This weeks specials!</h1>
+        <h1 className="lg:text-3xl md:text-xl font-bold">This weeks specials!</h1>
         <button className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded">
           Online Menu
         </button>
