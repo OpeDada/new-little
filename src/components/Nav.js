@@ -10,13 +10,15 @@ const Nav = () => {
   };
 
   return (
-    <nav className="px-10 xl:px-40 py-4 text-green font-bold flex items-center">
+    <nav className="px-10 xl:px-40 py-4 text-green font-bold flex items-center ">
       <img src={logo} alt="Nav logo"></img>
       <div className="container mx-auto">
         <div className="justify-end hidden md:flex md:items-center">
-          <ul className="flex md:space-x-4 lg:space-x-8">
+          <ul className="flex md:space-x-4 lg:space-x-8 ">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" className="active:text-white active:bg-green">
+                Home
+              </Link>
             </li>
             <li>
               <Link to="/about">About</Link>
@@ -25,7 +27,9 @@ const Nav = () => {
               <Link to="/menu">Menu</Link>
             </li>
             <li>
-              <Link to="/reservation">Reservations</Link>
+              <Link to="/reservation" className="">
+                Reservations
+              </Link>
             </li>
             <li>
               <Link to="/order">Order</Link>
