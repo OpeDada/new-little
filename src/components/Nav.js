@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/Logo.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -16,26 +16,26 @@ const Nav = () => {
         <div className="justify-end hidden md:flex md:items-center">
           <ul className="flex md:space-x-4 lg:space-x-8 ">
             <li>
-              <Link to="/" className="active:text-white active:bg-green">
+              <NavLink to="/" className="">
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <Link to="/menu">Menu</Link>
+              <NavLink to="/menu">Menu</NavLink>
             </li>
             <li>
-              <Link to="/reservation" className="">
+              <NavLink to="/reservation" className="">
                 Reservations
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/order">Order</Link>
+              <NavLink to="/order">Order</NavLink>
             </li>
             <li>
-              <Link to="/login">Login</Link>
+              <NavLink to="/login">Login</NavLink>
             </li>
           </ul>
         </div>
@@ -71,22 +71,22 @@ const Nav = () => {
         {showMenu && (
           <ul className="md:hidden justify-end flex flex-col items-center mt-4">
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <Link to="/menu">Menu</Link>
+              <NavLink to="/menu">Menu</NavLink>
             </li>
             <li>
-              <Link to="/reservation">Reservations</Link>
+              <NavLink to="/reservation">Reservations</NavLink>
             </li>
             <li>
-              <Link to="/order">Order</Link>
+              <NavLink to="/order">Order</NavLink>
             </li>
             <li>
-              <Link to="/login">Login</Link>
+              <NavLink to="/login">Login</NavLink>
             </li>
           </ul>
         )}
