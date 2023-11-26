@@ -8,7 +8,7 @@ const About = () => {
         <div className="">
           <h1 className="text-2xl font-bold">Little Lemon</h1>
           <h2 className="text-lg font-bold pb-4">Chicago</h2>
-          <p className="pr-8 max-w-lg">
+          <p className="pr-8 max-w-lg sm:pb-4">
             Little Lemon opened in 1995 by two Italian brothers, Adrian and
             Mario. Despite the city's diversity, the two brothers recognized the
             lack of Mediterranean cuisine in Chicago, and were inspired to bring
@@ -17,18 +17,18 @@ const About = () => {
             thirty years later.
           </p>
         </div>
-        <div className="relative">
-          <div className="relative bottom-8">
+        <div className="relative sm:flex sm:flex-col sm:gap-4">
+          <div className="lg:relative bottom-8 ">
             <img
               src={owners}
-              className="shadow-lg dark:shadow-black/20 rounded-lg max-w-sm"
+              className="shadow-lg dark:shadow-black/20 rounded-lg lg:max-w-sm"
               alt=""
             />
           </div>
-          <div className="absolute right-60 top-16">
+          <div className="lg:absolute right-60 top-16 ">
             <img
               src={owners2}
-              className="shadow-lg dark:shadow-black/20 rounded-lg max-w-sm"
+              className="shadow-lg dark:shadow-black/20 rounded-lg lg:max-w-sm"
               alt=""
             />
           </div>
