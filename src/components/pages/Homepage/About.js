@@ -8,7 +8,7 @@ const About = () => {
         <div className="">
           <h1 className="text-2xl font-bold">Little Lemon</h1>
           <h2 className="text-lg font-bold pb-4">Chicago</h2>
-          <p className="max-w-xs sm:pb-4">
+          <p className="lg:max-w-[50%] sm:pb-4">
             Little Lemon opened in 1995 by two Italian brothers, Adrian and
             Mario. Despite the city's diversity, the two brothers recognized the
             lack of Mediterranean cuisine in Chicago, and were inspired to bring
