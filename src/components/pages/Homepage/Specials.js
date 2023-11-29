@@ -3,11 +3,11 @@ import bruchetta from "../../../assets/bruchetta.svg";
 const Specials = () => {
   return (
     <div className="md:pt-48 py-16 px-10 xl:px-40 ">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center pt-8">
         <h1 className="lg:text-3xl md:text-xl font-bold">
           This weeks specials!
         </h1>
-        <button className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded">
+        <button className="lg:text-base md:text-sm sm:text-sm bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded">
           Online Menu
         </button>
       </div>
