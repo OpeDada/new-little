@@ -2,8 +2,7 @@ import bruchetta from "../../../assets/bruchetta.svg";
 
 const Specials = () => {
   return (
-
-    <div className="md:pt-48 py-16 px-10 xl:px-40">
+    <div className="md:pt-48 py-16 px-10 xl:px-40 ">
       <div className="flex justify-between items-center">
         <h1 className="lg:text-3xl md:text-xl font-bold">
           This weeks specials!
@@ -12,7 +11,7 @@ const Specials = () => {
           Online Menu
         </button>
       </div>
-      <section className="cards mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8 align-center">
+      <section className="cards mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8 justify-items-center">
         <article className="card max-w-sm bg-gray-light rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <img
             src={require("../../../assets/greek salad.jpg")}
@@ -42,7 +41,7 @@ const Specials = () => {
             </div>
             <p className="pb-8">
               Toasted bread, topped with tomato, prosciutto, and cheese.
-              Seasoned with salt and olive oil.
+              Freshly seasoned with salt and olive oil.
             </p>
             <button className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded">
               Order for Delivery
@@ -62,7 +61,7 @@ const Specials = () => {
             </div>
             <p className="pb-8">
               Fresh baked lemon bread coated in salt and sugar. Powdered in
-              citrus and lemon zest.
+              delicious citrus and lemon zest.
             </p>
             <button className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded">
               Order for Delivery
