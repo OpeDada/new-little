@@ -2,6 +2,7 @@ import bruchetta from "../../../assets/bruchetta.svg";
 
 const Specials = () => {
   return (
+
     <div className="md:pt-48 py-16 px-10 xl:px-40">
       <div className="flex justify-between items-center">
         <h1 className="lg:text-3xl md:text-xl font-bold">
@@ -11,7 +12,7 @@ const Specials = () => {
           Online Menu
         </button>
       </div>
-      <section className="cards mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
+      <section className="cards mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8 align-center">
         <article className="card max-w-sm bg-gray-light rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <img
             src={require("../../../assets/greek salad.jpg")}
