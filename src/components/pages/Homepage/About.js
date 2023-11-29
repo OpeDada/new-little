@@ -4,7 +4,10 @@ import owners2 from "../../../assets/M and Ad-b.jpg";
 const About = () => {
   return (
     <>
-      <div id="about" className="lg:flex justify-between my-24 p-10 xl:px-40">
+      <div
+        id="about"
+        className="md:flex justify-between my-24 p-10 xl:px-40"
+      >
         <div className="">
           <h1 className="text-2xl font-bold">Little Lemon</h1>
           <h2 className="text-lg font-bold pb-4">Chicago</h2>
@@ -17,15 +20,15 @@ const About = () => {
             thirty years later.
           </p>
         </div>
-        <div className="relative sm:flex sm:flex-col sm:gap-4">
-          <div className="lg:relative bottom-8 ">
+        <div className="relative">
+          <div className="relative bottom-8">
             <img
               src={owners}
-              className="shadow-lg dark:shadow-black/20 rounded-lg lg:max-w-xs"
+              className="shadow-lg dark:shadow-black/20 rounded-lg lg:max-w-xs sm:mb-8"
               alt=""
             />
           </div>
-          <div className="lg:absolute right-60 top-16 ">
+          <div className="absolute right-60 top-16">
             <img
               src={owners2}
               className="shadow-lg dark:shadow-black/20 rounded-lg lg:max-w-xs"
