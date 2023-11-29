@@ -20,11 +20,11 @@ const Header = () => {
           Reserve a Table
         </Link>
       </section>
-      <div className="lg:w-1/5 md:w-3/5 sm:w-screen sm:pt-12">
+      <div className="md:w-72 md:pt-0 sm:w-screen sm:pt-8 h-80  object-cover object-right-bottom">
         <img
           src={require("../../../assets/headerfood.jpg")}
           alt="Header food"
-          className="rounded-lg"
+          className="rounded-lg "
         />
       </div>
     </header>
@@ -33,4 +33,5 @@ const Header = () => {
 
 export default Header;
 
-          // className = "rounded-lg sm:w-128 md:w-160 lg:w-80 max-h-80 mt-4";
+
+          // lg:w-1/5 md:w-3/5 sm:w-screen sm:pt-12
