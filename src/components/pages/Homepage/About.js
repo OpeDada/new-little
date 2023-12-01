@@ -6,7 +6,7 @@ const About = () => {
     <>
       <div
         id="about"
-        className="md:flex justify-between my-24 p-10 xl:px-40"
+        className="lg:flex justify-between my-24 p-10 xl:px-40"
       >
         <div className="">
           <h1 className="text-2xl font-bold">Little Lemon</h1>
@@ -20,15 +20,15 @@ const About = () => {
             thirty years later.
           </p>
         </div>
-        <div className="relative">
-          <div className="relative bottom-8">
+        <div className="lg:relative" >
+          <div className="lg:relative bottom-8">
             <img
               src={owners}
               className="shadow-lg dark:shadow-black/20 rounded-lg lg:max-w-xs sm:mb-8"
               alt=""
             />
           </div>
-          <div className="absolute right-60 top-16">
+          <div className="lg:absolute right-60 top-16">
             <img
               src={owners2}
               className="shadow-lg dark:shadow-black/20 rounded-lg lg:max-w-xs"
