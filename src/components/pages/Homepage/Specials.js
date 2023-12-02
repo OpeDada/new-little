@@ -41,7 +41,7 @@ const Specials = () => {
             </div>
             <p className="pb-8">
               Toasted bread, topped with tomato, prosciutto, and cheese.
-              Freshly seasoned with salt and olive oil.
+              Seasoned with salt and olive oil.
             </p>
             <button className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded">
               Order for Delivery
