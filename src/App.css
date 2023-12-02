@@ -41,13 +41,18 @@
 /* .header-img {
   max-width: 100%;
   height: auto;
-}
-
-@media only screen and (max-device-width: 400px) {
-  .header-img {
-
-  }
 } */
+
+@media only screen and (max-device-width: 540px) {
+  .header-img {
+/* width: 140px; */
+  }
+}
+@media only screen and (max-device-width: 280px) {
+  .header-img {
+/* max-width: 100px; */
+  }
+}
 
 .active {
   @apply bg-green text-white font-bold py-2 px-4 rounded;
