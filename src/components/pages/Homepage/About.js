@@ -20,7 +20,7 @@ const About = () => {
             thirty years later.
           </p>
         </div>
-        <div className="lg:relative md:relative">
+        <div className="lg:relative md:relative pb-12">
           <div className="lg:relative bottom-8 md:relative">
             <img
               src={owners}

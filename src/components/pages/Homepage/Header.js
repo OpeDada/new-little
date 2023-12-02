@@ -20,7 +20,7 @@ const Header = () => {
           Reserve a Table
         </Link>
       </section>
-      <div className="md:w-72 md:pt-0 sm:w-screen sm:pt-8 h-80  object-cover object-right-bottom">
+      <div className="md:w-72 md:pt-0 sm:w-screen sm:pt-12 h-80  object-cover object-right-bottom">
         <img
           src={require("../../../assets/headerfood.jpg")}
           alt="Header food"
