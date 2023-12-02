@@ -32,6 +32,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-          // lg:w-1/5 md:w-3/5 sm:w-screen sm:pt-12
