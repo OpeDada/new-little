@@ -38,40 +38,30 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Follow us
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a
-                    href="https://github.com/themesberg/flowbite"
-                    className="hover:underline "
-                  >
-                    Github
-                  </a>
+              <h2 className="mb-6 font-semibold text-lg">Contact</h2>
+
+              <ul className="footer-links font-medium">
+                <li>
+                  <a href="/">Address</a>
                 </li>
                 <li>
-                  <a
-                    href="https://discord.gg/4eeurUVvTy"
-                    className="hover:underline"
-                  >
-                    Discord
-                  </a>
+                  <a href="/about">Phone number</a>
+                </li>
+                <li>
+                  <a href="/menu">Email</a>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Legal
-              </h2>
+              <h2 className="mb-6 font-semibold text-lg">Legal</h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Terms &amp; Conditions
                   </a>
                 </li>
@@ -82,15 +72,11 @@ const Footer = () => {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2023{" "}
-            <a href="https://flowbite.com/" className="hover:underline">
-              Flowbite™
-            </a>
-            . All Rights Reserved.
+            &copy; {new Date().getFullYear()} Little Lemon. All rights reserved.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a
-              href="#"
+              href="/"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <svg
@@ -109,7 +95,7 @@ const Footer = () => {
               <span className="sr-only">Facebook page</span>
             </a>
             <a
-              href="#"
+              href="/"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
               <svg
@@ -124,7 +110,7 @@ const Footer = () => {
               <span className="sr-only">Discord community</span>
             </a>
             <a
-              href="#"
+              href="/"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
               <svg
@@ -143,7 +129,7 @@ const Footer = () => {
               <span className="sr-only">Twitter page</span>
             </a>
             <a
-              href="#"
+              href="/"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
               <svg
@@ -162,7 +148,7 @@ const Footer = () => {
               <span className="sr-only">GitHub account</span>
             </a>
             <a
-              href="#"
+              href="/"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
               <svg
@@ -232,6 +218,7 @@ export default Footer;
         <a href="/menu">Email</a>
       </li>
     </ul>
+
     <ul className="footer-links">
       <p className="text-lg font-bold">Social Media</p>
       <hr />
