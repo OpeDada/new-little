@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <>
+
       <footer className="p-10 xl:px-40 bg-green h-75 text-white">
         <div className="flex justify-between items-center pb-8">
           <img
@@ -62,7 +62,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Little Lemon. All rights reserved.
         </p>
       </footer>
-    </>
+    
   );
 };
 
