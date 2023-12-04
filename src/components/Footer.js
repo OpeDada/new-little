@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" className="flex items-center">
+            <a href="/" className="flex items-center">
               <img
                 src={require("../assets/footer-logo.png")}
                 className="h-40 me-3"
@@ -54,8 +54,8 @@ const Footer = () => {
             </div>
             <div>
               <h2 className="mb-6 font-semibold text-lg">Legal</h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
+              <ul className="footer-links font-medium">
+                <li className="">
                   <a href="/" className="hover:underline">
                     Privacy Policy
                   </a>
@@ -174,5 +174,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
