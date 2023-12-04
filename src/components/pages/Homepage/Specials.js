@@ -2,7 +2,7 @@ import bruchetta from "../../../assets/bruchetta.svg";
 
 const Specials = () => {
   return (
-    <div className="xl:pt-44 md:pt-16 px-10 xl:px-40 ">
+    <div className="xl:pt-44 md:pt-16 px-10 xl:px-40 pb-8">
       <div className="flex justify-between items-center pt-8">
         <h1 className="lg:text-3xl md:text-xl font-bold">
           This weeks specials!
