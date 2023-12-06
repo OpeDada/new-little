@@ -36,7 +36,7 @@ const ReservationPage = () => {
   };
 
   return (
-    <div className="text-center">
+    <div className="">
       <BookingForm
         availableTimes={availableTimes}
         updateTimes={updateTimes}
