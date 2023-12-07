@@ -54,29 +54,16 @@ max-width: 100px;
   }
 } */
 
-.form-bg {
-  /* The image used */
-  background-image: green;
-
-  /* Control the height of the image */
-  min-height: 380px;
-
-  /* Center and scale the image nicely */
+/* .form-bg {
+  background-image: url('/src/assets/banner.jpg');
+  max-height: 260px;
+  margin-bottom: 120rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-}
+} */
 
-/* Add styles to the form container */
-.form-container {
-  position: absolute;
-  right: 0;
-  margin: 20px;
-  max-width: 300px;
-  padding: 16px;
-  background-color: white;
-}
 
 .active {
   @apply bg-green text-white font-bold py-2 px-4 rounded;
