@@ -38,37 +38,16 @@
 }
 
 
-/* .header-img {
-  max-width: 100%;
-  height: auto;
-} */
 
-/* @media only screen and (max-device-width: 540px) {
-  .header-img {
-width: 140px;
-  }
-}
-@media only screen and (max-device-width: 280px) {
-  .header-img {
-max-width: 100px;
-  }
-} */
-
-.form-bg {
+/* .form-bg {
   background-image: url('/src/assets/banner.jpg');
   max-height: 500px;
   margin-bottom: 20rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-}
+} */
 
-.form-container {
-  margin: 20px;
-  padding: 16px;
-  background-color: white;
-}
 
 .active {
   @apply bg-green text-white font-bold py-2 px-4 rounded;
