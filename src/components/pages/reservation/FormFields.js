@@ -13,11 +13,11 @@ const FormFields = ({
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-8 mb-4">
+      <div className="grid grid-cols-2 gap-8">
         <label className="text-left font-bold">Seating Preference</label>
         <div className="flex gap-24 col-span-2 mb-4">
-          <div className="mb-4">
-            <label className="flex items-center">
+          <div className="">
+            <label className="flex">
               <input
                 type="radio"
                 id="indoorSeating"
@@ -32,8 +32,8 @@ const FormFields = ({
               Indoor Seating
             </label>
           </div>
-          <div className="mb-4">
-            <label className="flex items-center">
+          <div className="">
+            <label className="flex">
               <input
                 type="radio"
                 id="outdoorSeating"
@@ -55,7 +55,7 @@ const FormFields = ({
         </div>
 
         <div className="col-span-1">
-          <label htmlFor="date" className="block font-medium">
+          <label htmlFor="date" className="">
             Choose Date<span className="text-red">*</span>
           </label>
           <input
@@ -72,7 +72,7 @@ const FormFields = ({
         </div>
 
         <div className="col-span-1">
-          <label htmlFor="guests" className="block font-medium">
+          <label htmlFor="guests" className="">
             Number of Guests<span className="text-red">*</span>
           </label>
           <input
@@ -90,7 +90,7 @@ const FormFields = ({
           )}
         </div>
         <div className="col-span-1">
-          <label htmlFor="time" className="block font-medium">
+          <label htmlFor="time" className="">
             Choose Time<span className="text-red">*</span>
           </label>
           <select
@@ -111,7 +111,7 @@ const FormFields = ({
           )}
         </div>
         <div className="col-span-1">
-          <label htmlFor="occasion" className="block font-medium">
+          <label htmlFor="occasion" className="">
             Occasion<span className="text-red">*</span>
           </label>
           <select
@@ -133,7 +133,7 @@ const FormFields = ({
         <button
           type="button"
           onClick={handleReserveTableClick}
-          className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded"
+          className="bg-yellow hover:bg-green hover:text-white font-bold py-2 px-4 rounded"
         >
           Reserve a Table
         </button>
@@ -147,8 +147,8 @@ const FormFieldsSecondSection = ({ formik }) => {
   return (
     <>
       <div id="secondSection" className="grid grid-cols-2 gap-8">
-        <div className="col-span-1 mb-4">
-          <label htmlFor="firstName" className="block font-medium">
+        <div className="col-span-1">
+          <label htmlFor="firstName" className="">
             First Name<span className="text-red">*</span>
           </label>
           <input
@@ -164,7 +164,7 @@ const FormFieldsSecondSection = ({ formik }) => {
         </div>
 
         <div className="col-span-1">
-          <label htmlFor="lastName" className="block font-medium">
+          <label htmlFor="lastName" className="">
             Last Name<span className="text-red">*</span>
           </label>
           <input
@@ -179,7 +179,7 @@ const FormFieldsSecondSection = ({ formik }) => {
           )}
         </div>
         <div className="col-span-1">
-          <label htmlFor="phone" className="block font-medium">
+          <label htmlFor="phone" className="">
             Phone<span className="text-red">*</span>
           </label>
           <input
@@ -194,7 +194,7 @@ const FormFieldsSecondSection = ({ formik }) => {
           )}
         </div>
         <div className="col-span-1">
-          <label htmlFor="email" className="block font-medium">
+          <label htmlFor="email" className="">
             Email<span className="text-red">*</span>
           </label>
           <input
@@ -210,7 +210,7 @@ const FormFieldsSecondSection = ({ formik }) => {
         </div>
 
         <div className="col-span-2">
-          <label htmlFor="specialRequest" className="block font-medium">
+          <label htmlFor="specialRequest" className="">
             Special Request
           </label>
           <textarea
@@ -223,7 +223,7 @@ const FormFieldsSecondSection = ({ formik }) => {
             <div className="text-red">{formik.errors.specialRequest}</div>
           )}
         </div>
-        <div className="col-span-2 mb-4 text-left">
+        <div className="col-span-2 mb-2 text-left">
           <h3 className="text-lg font-semibold mb-2">Reservation Details</h3>
           <p>Date: {formik.values.date}</p>
           <p>Time: {formik.values.time}</p>
@@ -252,7 +252,7 @@ const FormFieldsSecondSection = ({ formik }) => {
         <div className="col-span-2 text-center">
           <button
             type="submit"
-            className="bg-yellow hover:bg-green hover:text-white hover:border border-gray font-bold py-2 px-4 rounded cursor-pointer"
+            className="bg-yellow hover:bg-green hover:text-white font-bold py-2 px-4 rounded cursor-pointer"
             disabled={!formik.isValid}
           >
             Confirm Reservation
