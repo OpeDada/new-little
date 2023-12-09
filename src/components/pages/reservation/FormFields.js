@@ -90,7 +90,7 @@ const FormFields = ({
           )}
         </div>
         <div className="col-span-1">
-          <label htmlFor="time" className="">
+          <label htmlFor="time" className="block">
             Choose Time<span className="text-red">*</span>
           </label>
           <select
@@ -129,17 +129,7 @@ const FormFields = ({
           )}
         </div>
       </div>
-      <div className="text-center mb-8 mt-8">
-        <button
-          type="button"
-          onClick={handleReserveTableClick}
-          className="bg-yellow hover:bg-green hover:text-white font-bold py-2 px-4 rounded"
-        >
-          Reserve a Table
-        </button>
-      </div>
-      <div className=" grid gap-4 md:grid-cols-2 md:gap-8  justify-items-center ">
-        {/* grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 */}
+      <div className="grid gap-4 md:grid-cols-2 md:gap-8  justify-items-center mt-8 mb-16 ">
         <img
           src={require("../../../assets/restaurant.jpg")}
           alt="greek salad"
@@ -150,6 +140,15 @@ const FormFields = ({
           alt="greek salad"
           className="rounded w-80"
         />
+      </div>
+      <div className="text-center mb-16 mt-8">
+        <button
+          type="button"
+          onClick={handleReserveTableClick}
+          className="bg-yellow hover:bg-green hover:text-white font-bold py-2 px-4 rounded"
+        >
+          Reserve a Table
+        </button>
       </div>
     </>
   );

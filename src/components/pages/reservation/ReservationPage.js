@@ -29,7 +29,6 @@ const ReservationPage = () => {
     setSelectedDate(date); // Update the selectedDate when the date changes
   };
 
-
   // Set up the function for submitting the form
   const submitForm = async (formData) => {
     return await submitAPI(formData);
