@@ -138,7 +138,19 @@ const FormFields = ({
           Reserve a Table
         </button>
       </div>
-      <br />
+      <div className=" grid gap-4 md:grid-cols-2 md:gap-8  justify-items-center ">
+        {/* grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 */}
+        <img
+          src={require("../../../assets/restaurant.jpg")}
+          alt="greek salad"
+          className="rounded w-80"
+        />
+        <img
+          src={require("../../../assets/restaurant chef B.jpg")}
+          alt="greek salad"
+          className="rounded w-80"
+        />
+      </div>
     </>
   );
 };
@@ -233,7 +245,7 @@ const FormFieldsSecondSection = ({ formik }) => {
         </div>
 
         <div className="mb-4">
-          <label className="flex items-center cursor-pointer">
+          <label className="flex cursor-pointer">
             <input
               type="checkbox"
               name="confirmSelection"
@@ -244,9 +256,7 @@ const FormFieldsSecondSection = ({ formik }) => {
           </label>
           {formik.touched.confirmSelection &&
             formik.errors.confirmSelection && (
-              <div className="text-red w-[16rem]">
-                {formik.errors.confirmSelection}
-              </div>
+              <div className="text-red w-[16rem] absolute">{formik.errors.confirmSelection}</div>
             )}
         </div>
         <div className="col-span-2 text-center">
