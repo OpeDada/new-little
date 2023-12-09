@@ -14,8 +14,8 @@ const FormFields = ({
   return (
     <>
       <div className="grid grid-cols-2 gap-8 mb-4">
-        <label className="block font-medium">Seating Preference</label>
-        <div className="flex gap-4 col-span-2 mb-4">
+        <label className="text-left font-bold">Seating Preference</label>
+        <div className="flex gap-24 col-span-2 mb-4">
           <div className="mb-4">
             <label className="flex items-center">
               <input
