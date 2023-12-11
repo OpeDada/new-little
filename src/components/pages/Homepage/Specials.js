@@ -1,4 +1,4 @@
-import bruchetta from "../../../assets/bruchetta.svg";
+import bruchetta from "../../../assets/bruchetta.jpg";
 
 const Specials = () => {
   return (
