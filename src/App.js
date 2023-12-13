@@ -10,11 +10,11 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="mx-auto">
         <Nav />
         <Routes>
-          <Route path={process.env.PUBLIC_URL + "/"} element={<Homepage />} />
+          <Route path="/" element={<Homepage />} />
           <Route path="/reservation" element={<ReservationPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/menu" element={<Specials />} />
