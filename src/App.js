@@ -14,7 +14,7 @@ function App() {
       <div className="mx-auto">
         <Nav />
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path={process.env.PUBLIC_URL + "/"} element={<Homepage />} />
           <Route path="/reservation" element={<ReservationPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/menu" element={<Specials />} />
