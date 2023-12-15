@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.756753c7.css",
-    "main.js": "/static/js/main.889c83fb.js",
-    "static/js/787.7225c8a1.chunk.js": "/static/js/787.7225c8a1.chunk.js",
-    "static/media/restaurant.jpg": "/static/media/restaurant.986d39277aad3f6ac0e8.jpg",
-    "static/media/headerfood.jpg": "/static/media/headerfood.d6791034d9af2da78f71.jpg",
-    "static/media/greek salad.jpg": "/static/media/greek salad.1be19e1b10bf90fef422.jpg",
-    "static/media/M and Ad-A.jpg": "/static/media/M and Ad-A.72aa4b65afaef3f38588.jpg",
-    "static/media/restaurant chef B.jpg": "/static/media/restaurant chef B.4ef0ce2989308a0be145.jpg",
-    "static/media/M and Ad-b.jpg": "/static/media/M and Ad-b.00a044b3f93e458b4fe0.jpg",
-    "static/media/bruchetta.jpg": "/static/media/bruchetta.6c20f006060bf97d9c84.jpg",
-    "static/media/banner.jpg": "/static/media/banner.c596a86f301fd3952018.jpg",
-    "static/media/lemon_d.jpg": "/static/media/lemon_d.b8844ad92e69a4133387.jpg",
-    "static/media/Logo.svg": "/static/media/Logo.6c132dfefa69396bba43f72aa595e62f.svg",
-    "static/media/footer-logo.png": "/static/media/footer-logo.4470f9c9e815da98dbb3.png",
-    "index.html": "/index.html",
-    "main.756753c7.css.map": "/static/css/main.756753c7.css.map",
-    "main.889c83fb.js.map": "/static/js/main.889c83fb.js.map",
-    "787.7225c8a1.chunk.js.map": "/static/js/787.7225c8a1.chunk.js.map"
+    "main.css": "/new-little/static/css/main.48bc5c2d.css",
+    "main.js": "/new-little/static/js/main.0c1fc888.js",
+    "static/js/787.7225c8a1.chunk.js": "/new-little/static/js/787.7225c8a1.chunk.js",
+    "static/media/restaurant.jpg": "/new-little/static/media/restaurant.986d39277aad3f6ac0e8.jpg",
+    "static/media/headerfood.jpg": "/new-little/static/media/headerfood.d6791034d9af2da78f71.jpg",
+    "static/media/greek salad.jpg": "/new-little/static/media/greek salad.1be19e1b10bf90fef422.jpg",
+    "static/media/M and Ad-A.jpg": "/new-little/static/media/M and Ad-A.72aa4b65afaef3f38588.jpg",
+    "static/media/restaurant chef B.jpg": "/new-little/static/media/restaurant chef B.4ef0ce2989308a0be145.jpg",
+    "static/media/M and Ad-b.jpg": "/new-little/static/media/M and Ad-b.00a044b3f93e458b4fe0.jpg",
+    "static/media/bruchetta.jpg": "/new-little/static/media/bruchetta.6c20f006060bf97d9c84.jpg",
+    "static/media/banner.jpg": "/new-little/static/media/banner.c596a86f301fd3952018.jpg",
+    "static/media/lemon_d.jpg": "/new-little/static/media/lemon_d.b8844ad92e69a4133387.jpg",
+    "static/media/Logo.svg": "/new-little/static/media/Logo.6c132dfefa69396bba43f72aa595e62f.svg",
+    "static/media/footer-logo.png": "/new-little/static/media/footer-logo.4470f9c9e815da98dbb3.png",
+    "index.html": "/new-little/index.html",
+    "main.48bc5c2d.css.map": "/new-little/static/css/main.48bc5c2d.css.map",
+    "main.0c1fc888.js.map": "/new-little/static/js/main.0c1fc888.js.map",
+    "787.7225c8a1.chunk.js.map": "/new-little/static/js/787.7225c8a1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.756753c7.css",
-    "static/js/main.889c83fb.js"
+    "static/css/main.48bc5c2d.css",
+    "static/js/main.0c1fc888.js"
   ]
 }
