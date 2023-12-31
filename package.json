@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.0",
-    "jest-watch-typeahead": "^0.6.5"
+    "jest-watch-typeahead": "^0.6.5",
+    "netlify-cli": "^17.10.2"
   }
 }
