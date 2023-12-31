@@ -1,10 +1,10 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
-import Homepage from "./components/pages/homepage/Homepage";
+import Homepage from "./components/pages/home/Homepage";
 import ReservationPage from "./components/pages/reservation/ReservationPage";
-import About from "./components/pages/homepage/About"
-import Specials from "./components/pages/homepage/Specials";
+import About from "./components/pages/home/About"
+import Specials from "./components/pages/home/Specials";
 import ConfirmedBooking from "./components/pages/ConfirmedBooking";
 import Footer from "./components/Footer";
 
